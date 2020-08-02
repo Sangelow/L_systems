@@ -1,10 +1,8 @@
 from turtle import Screen, RawPen, done
 from time import sleep
-from source.L_system import L_system, Rule
+from source.L_system import L_system
 import yaml
 
-# TODO:
-#   - Parallelize the L_system generation
 
 name_list = [
     'fractal_plant',
@@ -19,7 +17,7 @@ name_list = [
     ]
 
 # Parameters
-name = name_list[-1]
+name = name_list[8]
 n_generation = 10
 
 # Create the L_system
@@ -30,9 +28,7 @@ with open(f'input/{name}.yaml') as file:
 variables = data['variables'].keys()
 constants = data['constants'].keys()
 axiom = data['axiom']
-rules = []
-for rule in data['rules']:
-    rules.append(Rule(*rule))
+rules = data['rules']
 system = L_system(variables, constants, axiom, rules)
 
 # Load the actions

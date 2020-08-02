@@ -3,24 +3,9 @@ from multiprocessing import cpu_count
 from source.utils import split_axiom
 
 
-class Rule:
-
-    def __init__(self, lhs, rhs):
-        # Left hand side (input)
-        self.lhs = lhs
-        # Right hand side (output)
-        self.rhs = rhs
-
-    def __repr__(self):
-        return 'Rule()'
-
-    def __str__(self):
-        return f'{self.lhs} -> {self.rhs}'
-
-
 class L_system:
 
-    def __init__(self, variables, constants, axiom, rules, N=8):
+    def __init__(self, variables, constants, axiom, rules, N=cpu_count()):
         # Alphabet
         self.variables = variables
         # Constants
@@ -50,10 +35,6 @@ class L_system:
             if value in self.constants:
                 new_axiom += value
             else:
-                for rule in self.rules:
-                    if value == rule.lhs:
-                        for new_value in rule.rhs:
-                            new_axiom += new_value
-                        break
+                new_axiom += self.rules[value]
         return new_axiom
 

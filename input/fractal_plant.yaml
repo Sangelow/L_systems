@@ -21,6 +21,6 @@ constants:
 axiom: 'FX'
 # Define the rules
 rules:
-    - ['F', 'FF']
-    - ['X', 'F+[[X]-X]-F[-FX]+X']
+    'F': 'FF'
+    'X': 'F+[[X]-X]-F[-FX]+X'
 

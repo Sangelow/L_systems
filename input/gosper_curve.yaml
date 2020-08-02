@@ -9,5 +9,5 @@ constants:
 axiom: 'A'
 # Define the rules
 rules:
-    - ['A', 'A-B--B+A++AA+B-']
-    - ['B', '+A-BB--B-A++A+B']
+    'A': 'A-B--B+A++AA+B-'
+    'B': '+A-BB--B-A++A+B'

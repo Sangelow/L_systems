@@ -15,6 +15,5 @@ constants:
 axiom: 'A'
 # Define the rules
 rules:
-    - ['A', '-BF+AFA+FB-']
-    - ['B', '+AF-BFB-FA+']
-
+    'A': '-BF+AFA+FB-'
+    'B': '+AF-BFB-FA+'

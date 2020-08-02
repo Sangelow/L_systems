@@ -9,5 +9,5 @@ constants:
 axiom: 'F-G-G'
 # Define the rules
 rules:
-    - ['F', 'F-G+F+G-F']
-    - ['G', 'GG']
+    'F': 'F-G+F+G-F'
+    'G': 'GG'

@@ -11,5 +11,4 @@ constants:
 axiom: 'F'
 # Define the rules
 rules:
-    - ['F', '+F--F+']
-
+    'F': '+F--F+'

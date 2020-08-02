@@ -10,5 +10,5 @@ constants:
 axiom: 'FX+FX+'
 # Define the rules
 rules:
-    - ['X', 'X+YF']
-    - ['Y', 'FX-Y']
+    'X': 'X+YF'
+    'Y': 'FX-Y'
