@@ -1,0 +1,13 @@
+# Define the alphabet
+variables:
+    'F': 'pen.forward(10)'
+    'G': 'pen.forward(10)'
+constants:
+    '+': 'pen.left(120)'
+    '-': 'pen.right(120)'
+# Define the initial axiom
+axiom: 'F-G-G'
+# Define the rules
+rules:
+    - ['F', 'F-G+F+G-F']
+    - ['G', 'GG']
