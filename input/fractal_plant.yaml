@@ -1,0 +1,26 @@
+# Define the alphabet
+variables:
+    'X': |-
+        None
+    'F': |-
+        pen.forward(10)
+constants:
+    '+': |-
+        pen.left(25)
+    '-': |-
+        pen.right(25)
+    '[': |-
+        positions.append(pen.position())
+        angles.append(pen.heading())
+    ']': |-
+        pen.up()
+        pen.setposition(positions.pop())
+        pen.setheading(angles.pop())
+        pen.down()
+# Define the initial axiom
+axiom: 'FX'
+# Define the rules
+rules:
+    - ['F', 'FF']
+    - ['X', 'F+[[X]-X]-F[-FX]+X']
+

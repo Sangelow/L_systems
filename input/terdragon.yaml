@@ -1,0 +1,11 @@
+# Define the alphabet
+variables:
+    'F': 'pen.forward(10)'
+constants:
+    '+': 'pen.left(120)'
+    '-': 'pen.right(120)'
+# Define the initial axiom
+axiom: 'F'
+# Define the rules
+rules:
+    - ['F', 'F+F-F']

@@ -1,0 +1,13 @@
+# Define the alphabet
+variables:
+    'A': 'pen.forward(10)'
+    'B': 'pen.forward(10)'
+constants:
+    '+': 'pen.left(60)'
+    '-': 'pen.right(60)'
+# Define the initial axiom
+axiom: 'A'
+# Define the rules
+rules:
+    - ['A', 'A-B--B+A++AA+B-']
+    - ['B', '+A-BB--B-A++A+B']

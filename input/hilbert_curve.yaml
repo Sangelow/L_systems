@@ -1,0 +1,20 @@
+# Define the alphabet
+variables:
+    'A': |-
+        None
+    'B': |-
+        None
+constants:
+    'F': |-
+        pen.forward(10)
+    '+': |-
+        pen.left(90)
+    '-': |-
+        pen.right(90)
+# Define the initial axiom
+axiom: 'A'
+# Define the rules
+rules:
+    - ['A', '-BF+AFA+FB-']
+    - ['B', '+AF-BFB-FA+']
+
